@@ -17,7 +17,9 @@ module.exports = [
             "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewActualDate": "2019-09-13",
             "automaticReleaseDate": "2020-02-02",
-            "sentenceExpiryDate": "2020-05-24"
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -34,7 +36,11 @@ module.exports = [
             "bookingId": 1200616,
             "conditionalReleaseDate": moment().add(14, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(9, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -51,7 +57,11 @@ module.exports = [
             "bookingId": 1200649,
             "conditionalReleaseDate": moment().add(11, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(7, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -68,7 +78,11 @@ module.exports = [
             "bookingId": 1200657,
             "conditionalReleaseDate": moment().add(14, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(8, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -85,7 +99,11 @@ module.exports = [
             "bookingId": 1200669,
             "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -102,7 +120,11 @@ module.exports = [
             "bookingId": 1129006,
             "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -119,7 +141,11 @@ module.exports = [
             "bookingId": 1088811,
             "conditionalReleaseDate": moment().add(53, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate":  moment().add(4, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -136,7 +162,11 @@ module.exports = [
             "bookingId": 1200667,
             "conditionalReleaseDate": moment().add(16, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate":  moment().add(1, 'year').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2018-02-02"
+            "automaticReleaseDate": "2018-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -153,7 +183,11 @@ module.exports = [
             "bookingId": 1062084,
             "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(1, 'year').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -170,7 +204,11 @@ module.exports = [
             "bookingId": 1200642,
             "conditionalReleaseDate": moment().add(119, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -187,7 +225,11 @@ module.exports = [
             "bookingId": 1110602,
             "conditionalReleaseDate": moment().add(6, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(4, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -204,7 +246,11 @@ module.exports = [
             "bookingId": 1200668,
             "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(9, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -221,7 +267,11 @@ module.exports = [
             "bookingId": 1165795,
             "conditionalReleaseDate": moment().add(12, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(10, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -238,7 +288,11 @@ module.exports = [
             "bookingId": 2200635,
             "conditionalReleaseDate": moment().add(22, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(13, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -255,7 +309,11 @@ module.exports = [
             "bookingId": 1173571,
             "conditionalReleaseDate": moment().add(23, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(16, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -272,7 +330,11 @@ module.exports = [
             "bookingId": 1167792,
             "conditionalReleaseDate": moment().add(8, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -289,7 +351,11 @@ module.exports = [
             "bookingId": 1080794,
             "conditionalReleaseDate": moment().add(12, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -306,7 +372,11 @@ module.exports = [
             "bookingId": 1200666,
             "conditionalReleaseDate": moment().add(53, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(8, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -323,7 +393,11 @@ module.exports = [
             "bookingId": 1068733,
             "conditionalReleaseDate": moment().add(28, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(18, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -340,7 +414,11 @@ module.exports = [
             "bookingId": 1152613,
             "conditionalReleaseDate": moment().add(24, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(12, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -357,7 +435,11 @@ module.exports = [
             "bookingId": 1200665,
             "conditionalReleaseDate": moment().add(20, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(3, 'weeks').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -374,7 +456,11 @@ module.exports = [
             "bookingId": 1068236,
             "conditionalReleaseDate": moment().add(95, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(7, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -391,7 +477,11 @@ module.exports = [
             "bookingId": 1200659,
             "conditionalReleaseDate": moment().add(77, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(5, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -408,7 +498,11 @@ module.exports = [
             "bookingId": 1200637,
             "conditionalReleaseDate": moment().add(81, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(5, 'years').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -425,7 +519,11 @@ module.exports = [
             "bookingId": 1130463,
             "conditionalReleaseDate": moment().add(14, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(1, 'week').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -442,7 +540,11 @@ module.exports = [
             "bookingId": 1200617,
             "conditionalReleaseDate": moment().add(13, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(3, 'days').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -459,7 +561,11 @@ module.exports = [
             "bookingId": 1200645,
             "conditionalReleaseDate": moment().add(100, 'weeks').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(15, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -476,7 +582,11 @@ module.exports = [
             "bookingId": 1173494,
             "conditionalReleaseDate": moment().add(40, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(22, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     },
     {
@@ -493,7 +603,11 @@ module.exports = [
             "bookingId": 1131447,
             "conditionalReleaseDate": moment().add(39, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewEligibilityDate": moment().add(34, 'months').format("YYYY-MM-DD"),
-            "automaticReleaseDate": "2020-02-02"
+            "automaticReleaseDate": "2020-02-02",
+            "homeDetentionCurfewActualDate": "2019-09-13",
+            "sentenceExpiryDate": "2020-05-24",
+            "licenceExpiryDate": "2020-05-02",
+            "topupSupervisionExpiryDate": "2020-10-15"
         }
     }
 ]
