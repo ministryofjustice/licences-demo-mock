@@ -7,8 +7,8 @@ router.get('/home-detention-curfew-candidates', function(req, res) {
 });
 
 router.post('/bookings', function(req, res) {
-    const bookingNumbers = req.body;
-    const candidates = hdcCandidates.filter(candidate => bookingNumbers.includes(String(candidate.bookingId)));
+    const bookingNumbers = req.body.map(Number);
+    const candidates = hdcCandidates.filter(candidate => bookingNumbers.includes(candidate.bookingId));
     res.send(candidates)
 });
 

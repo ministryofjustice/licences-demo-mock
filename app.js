@@ -9,6 +9,7 @@ const sentencesRouter = require('./routes/sentences');
 const bookingsRouter = require('./routes/bookings');
 const personsRouter = require('./routes/persons');
 const imagesRouter = require('./routes/image');
+const relationshipsRouter = require('./routes/relationships');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use('/elite2api/offender-sentences', sentencesRouter);
 app.use('/elite2api/bookings', bookingsRouter);
 app.use('/elite2api/persons', personsRouter);
 app.use('/elite2api/images', imagesRouter);
+app.use('/elite2api/offender-relationships', relationshipsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
