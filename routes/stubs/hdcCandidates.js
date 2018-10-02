@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 module.exports = [
     {
         "bookingId": 1200664,
@@ -11,8 +13,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200664,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-08-23",
+            "conditionalReleaseDate": moment().add(7, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
             "homeDetentionCurfewActualDate": "2019-09-13",
             "automaticReleaseDate": "2020-02-02",
             "sentenceExpiryDate": "2020-05-24"
@@ -30,8 +32,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200616,
-            "conditionalReleaseDate": "2019-12-01",
-            "homeDetentionCurfewEligibilityDate": "2019-08-12",
+            "conditionalReleaseDate": moment().add(14, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(9, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -47,8 +49,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200649,
-            "conditionalReleaseDate": "2015-07-13",
-            "homeDetentionCurfewEligibilityDate": "2018-01-15",
+            "conditionalReleaseDate": moment().add(11, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(7, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -64,8 +66,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200657,
-            "conditionalReleaseDate": "2022-10-15",
-            "homeDetentionCurfewEligibilityDate": "2022-05-12",
+            "conditionalReleaseDate": moment().add(14, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(8, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -81,8 +83,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200669,
-            "conditionalReleaseDate": "2024-12-13",
-            "homeDetentionCurfewEligibilityDate": "2023-01-30",
+            "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -98,8 +100,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1129006,
-            "conditionalReleaseDate": "2015-07-13",
-            "homeDetentionCurfewEligibilityDate": "2014-10-15",
+            "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -115,8 +117,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1088811,
-            "conditionalReleaseDate": "2019-08-13",
-            "homeDetentionCurfewEligibilityDate": "2014-10-15",
+            "conditionalReleaseDate": moment().add(53, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate":  moment().add(4, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -132,8 +134,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200667,
-            "conditionalReleaseDate": "",
-            "homeDetentionCurfewEligibilityDate": "2014-10-15",
+            "conditionalReleaseDate": moment().add(16, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate":  moment().add(1, 'year').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2018-02-02"
         }
     },
@@ -149,8 +151,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1062084,
-            "conditionalReleaseDate": "2019-07-13",
-            "homeDetentionCurfewEligibilityDate": "2019-10-15",
+            "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(1, 'year').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -166,8 +168,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200642,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(119, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(2, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -183,8 +185,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1110602,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(6, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(4, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -200,8 +202,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200668,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(9, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -217,8 +219,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1165795,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(12, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(10, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -234,8 +236,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 2200635,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(22, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(13, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -251,8 +253,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1173571,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(23, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(16, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -268,8 +270,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1167792,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(8, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -285,8 +287,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1080794,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(12, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(5, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -302,8 +304,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200666,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(53, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(8, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -319,8 +321,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1068733,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(28, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(18, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -336,8 +338,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1152613,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(24, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(12, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -353,8 +355,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200665,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(20, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(3, 'weeks').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -370,8 +372,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1068236,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(95, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(7, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -387,8 +389,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200659,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(77, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(5, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -404,8 +406,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200637,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(81, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(5, 'years').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -421,8 +423,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1130463,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(14, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(1, 'week').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -438,8 +440,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200617,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(13, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(3, 'days').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -455,8 +457,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1200645,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(100, 'weeks').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(15, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -472,8 +474,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1173494,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(40, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(22, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     },
@@ -489,8 +491,8 @@ module.exports = [
         "facialImageId": 1,
         "sentenceDetail": {
             "bookingId": 1131447,
-            "conditionalReleaseDate": "2019-10-15",
-            "homeDetentionCurfewEligibilityDate": "2019-07-13",
+            "conditionalReleaseDate": moment().add(39, 'months').format("YYYY-MM-DD"),
+            "homeDetentionCurfewEligibilityDate": moment().add(34, 'months').format("YYYY-MM-DD"),
             "automaticReleaseDate": "2020-02-02"
         }
     }
