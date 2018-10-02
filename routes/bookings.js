@@ -44,19 +44,38 @@ router.get('/:bookingId/identifiers', function(req, res) {
 });
 
 router.get('/:bookingId/mainOffence', function(req, res) {
-    res.send([
+
+    const crimes = [
         {
             "bookingId": 1200635,
-            "offenceDescription": "Cause exceed max permitted wt of artic' vehicle - No of axles/configuration (No MOT/Manufacturer's Plate)"
+            "offenceDescription": "Possess with intent to supply a controlled drug of Class A - Cocaine"
+        },
+        {
+            "bookingId": 1200635,
+            "offenceDescription": "Adult invite a child to participate in a lottery"
+        },
+        {
+            "bookingId": 1200635,
+            "offenceDescription": "Abandoning fighting dog"
+        },
+        {
+            "bookingId": 1200635,
+            "offenceDescription": "Armed robbery"
+        },
+        {
+            "bookingId": 1200635,
+            "offenceDescription": "Battery"
         }
-    ])
+    ];
+
+    res.send([crimes[Math.floor(Math.random() * crimes.length)]])
 });
 
 router.get('/:bookingId/relationships', function(req, res) {
     res.send([
         {
-            "lastName": "Ball",
-            "firstName": "David",
+            "lastName": "Ryan",
+            "firstName": "Orton",
             "middleName": "string",
             "contactType": "string",
             "contactTypeDescription": "string",
