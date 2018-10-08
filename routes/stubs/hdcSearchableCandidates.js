@@ -3,6 +3,7 @@ module.exports = [
     "bookingId": 1200635,
     "offenderNo": "A5001DY",
     "firstName": "MARK",
+    "middleName": "MIDDLE",
     "lastName": "ANDREWS",
     "dateOfBirth": "1989-10-22",
     "agencyLocationId": "LT1",
@@ -20,4 +21,4 @@ module.exports = [
       "topupSupervisionExpiryDate": "2020-10-15"
     }
   }
-]
+];
