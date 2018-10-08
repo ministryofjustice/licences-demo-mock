@@ -73,7 +73,7 @@ function translateAuthorities(token, roleHash) {
     // try for a real jwt to get the roles from
     const jwt = jwtDecode(accessToken);
     const authorities = jwt.authorities;
-    return authorities.map(roleCode => roleHash[roleCode.slice(-2).toLowerCase()]).find(a => a !== null);
+    return authorities.map(roleCode => roleHash[roleCode.slice(-2).toLowerCase()]).find(a => a);
   } catch (error) {
     // otherwise fallback to a ca_token, ro_token, dm_token
     return roleHash[accessToken.substring(0, 2).toLowerCase()];
