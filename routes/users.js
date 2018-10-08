@@ -9,9 +9,37 @@ const profiles = {
     "email": "CA-DEMO@work",
     "activeCaseLoadId": "CA-DEMO",
   },
+  catest: {
+    "firstName": "User",
+    "lastName": "CA_USER",
+    "staffId": "2",
+    "email": "CA_USER@work",
+    "activeCaseLoadId": "DEF",
+  },
+  camulti: {
+    "firstName": "User",
+    "lastName": "CA_MULTI_USER",
+    "staffId": "2",
+    "email": "CA_USER@work",
+    "activeCaseLoadId": "DEF",
+  },
   ro: {
     "firstName": "Ryan",
     "lastName": "Orton",
+    "staffId": "1",
+    "email": "RO_USER@work",
+    "activeCaseLoadId": "ABC",
+  },
+  rotest: {
+    "firstName": "User",
+    "lastName": "RO_USER",
+    "staffId": "2",
+    "email": "RO_USER@work",
+    "activeCaseLoadId": "ABC",
+  },
+  romulti: {
+    "firstName": "User",
+    "lastName": "ROMULTI_USER",
     "staffId": "1",
     "email": "RO_USER@work",
     "activeCaseLoadId": "ABC",
@@ -23,6 +51,20 @@ const profiles = {
     "email": "DM_USER@work",
     "activeCaseLoadId": "GHI",
   },
+  dmtest: {
+    "firstName": "User",
+    "lastName": "DM_USER",
+    "staffId": "3",
+    "email": "DM_USER@work",
+    "activeCaseLoadId": "GHI",
+  },
+  dmmulti: {
+    "firstName": "User",
+    "lastName": "DMMULTI_USER",
+    "staffId": "3",
+    "email": "DM_USER@work",
+    "activeCaseLoadId": "GHI",
+  }
 };
 
 const roles = {
@@ -48,14 +90,12 @@ const roles = {
 
 router.get('/me', function(req, res) {
   const profile = getProfile(req.headers.authorization);
-
   res.send(profile)
 });
 
 router.get('/me/roles', function(req, res) {
-  const profile = getRoleCode(req.headers.authorization);
-
-  res.send(profile)
+  const role = getRoleCode(req.headers.authorization);
+  res.send(role)
 });
 
 function getProfile(token) {
@@ -63,10 +103,10 @@ function getProfile(token) {
 }
 
 function getRoleCode(token) {
-  return [translateAuthorities(token, roles)];
+  return [translateAuthorities(token, roles, 'ROLE')];
 }
 
-function translateAuthorities(token, roleHash) {
+function translateAuthorities(token, roleHash, type = 'PROFILE') {
   // Authorization expected to be of form 'Bearer x'
   const accessToken = token.split(' ')[1];
   try {
@@ -76,7 +116,11 @@ function translateAuthorities(token, roleHash) {
     return authorities.map(roleCode => roleHash[roleCode.slice(-2).toLowerCase()]).find(a => a);
   } catch (error) {
     // otherwise fallback to a ca_token, ro_token, dm_token
-    return roleHash[accessToken.substring(0, 2).toLowerCase()];
+    if (type === 'ROLE') {
+      return roleHash[accessToken.substring(0, 2).toLowerCase()];
+    }
+
+    return roleHash[accessToken.split('-')[0].toLowerCase()];
   }
 }
 

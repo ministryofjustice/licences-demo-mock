@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const hdcCandidates = require('./stubs/hdcCandidates');
+const getCaselist = require('./helpers/caselistForUser');
 
-router.get('/externalRef/:deliusUserName/COM', function(req, res) {
-    res.send(hdcCandidates)
+router.get('/externalRef/:deliusUserName/COM', function (req, res) {
+  const caselist = getCaselist(req.headers.authorization);
+
+  res.send(caselist)
 });
 
 module.exports = router;
