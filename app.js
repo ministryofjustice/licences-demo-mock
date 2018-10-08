@@ -15,7 +15,7 @@ const agenciesRouter = require('./routes/agencies');
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,6 +28,9 @@ app.use('/elite2api/persons', personsRouter);
 app.use('/elite2api/images', imagesRouter);
 app.use('/elite2api/offender-relationships', relationshipsRouter);
 app.use('/elite2api/agencies', agenciesRouter);
+app.get('/elite2api/health', (req, res) => {
+  res.send({status: 'UP'});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
