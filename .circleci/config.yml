@@ -1,5 +1,5 @@
 defaults: &defaults
-  working_directory: ~/noms-digital-studio/licences-demo-mock
+  working_directory: ~/noms-digital-studio/licences-nomis-mocks
   docker:
     - image: circleci/node:8
 
@@ -38,7 +38,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/noms-digital-studio/licences-demo-mock
+          at: ~/noms-digital-studio/licences-nomis-mocks
       - setup_remote_docker:
           exclusive: true
       - run:
@@ -51,16 +51,16 @@ jobs:
              docker build --rm=false . \
                  --build-arg BUILD_NUMBER=$VERSION \
                  --build-arg GIT_REF=$GIT_REF \
-                 --tag "mojdigitalstudio/licences-demo-mock:$BUILD_VERSION" \
+                 --tag "mojdigitalstudio/licences-nomis-mocks:$BUILD_VERSION" \
                  --label "maintainer=licences-team@digital.justice.gov.uk" \
                  --label "build.number=$CIRCLE_BUILD_NUM" \
                  --label "build.url=$CIRCLE_BUILD_URL" \
                  --label "build.gitref=$GIT_REF"
 
              docker login -u $DOCKER_USER -p $DOCKER_PASS
-             docker tag mojdigitalstudio/licences-demo-mock:$BUILD_VERSION mojdigitalstudio/icences-demo-mock:latest
-             docker push mojdigitalstudio/licences-demo-mock:$BUILD_VERSION
-             docker push mojdigitalstudio/licences-demo-mock:latest
+             docker tag mojdigitalstudio/licences-nomis-mocks:$BUILD_VERSION mojdigitalstudio/licences-nomis-mocks:latest
+             docker push mojdigitalstudio/licences-nomis-mocks:$BUILD_VERSION
+             docker push mojdigitalstudio/licences-nomis-mocks:latest
 
 workflows:
   version: 2
