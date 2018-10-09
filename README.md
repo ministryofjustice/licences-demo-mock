@@ -9,7 +9,7 @@ Nomis mocks for the licences service built in node
   $ npm install
   ```  
 
-3. Start the server
+2. Start the server
 
   ```   
   $ npm run start
@@ -17,3 +17,14 @@ Nomis mocks for the licences service built in node
   application will run on port 9090
   
   ```   
+
+# Building and pushing docker image
+
+1. Build the image locally
+```
+docker build -t mojdigitalstudio/licences-nomis-mocks:latest .
+```
+2. Push the image to the docker repo
+```
+docker push mojdigitalstudio/licences-nomis-mocks:latest
+```
