@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const getCaselist = require('./helpers/caselistForUser');
+const hdcSearchableCanditates = require('./stubs/hdcSearchableCandidates');
+
+router.get('/', function (req, res) {
+  res.send([hdcSearchableCanditates.find(candidate => candidate.offenderNo === req.query.offenderNo)])
+});
 
 router.get('/home-detention-curfew-candidates', function (req, res) {
   const caselist = getCaselist(req.headers.authorization);
