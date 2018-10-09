@@ -99,14 +99,15 @@ router.get('/me/roles', function(req, res) {
 });
 
 function getProfile(token) {
-  return translateAuthorities(token, profiles);
+  return findFirstFromToken(token, profiles);
 }
 
 function getRoleCode(token) {
-  return [translateAuthorities(token, roles, 'ROLE')];
+  const roleCode = findFirstFromToken(token, roles, 'ROLE');
+  return roleCode ? [roleCode] : [];
 }
 
-function translateAuthorities(token, roleHash, type = 'PROFILE') {
+function findFirstFromToken(token, roleHash, type = 'PROFILE') {
   // Authorization expected to be of form 'Bearer x'
   const accessToken = token.split(' ')[1];
   try {
