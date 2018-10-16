@@ -20,39 +20,5 @@ router.post('/token', function (req, res) {
 module.exports = router;
 
 function getToken(username) {
-  if (username === 'CA_USER_TEST') {
-    return 'catest-token'
-  }
-
-  if (username === 'CA_USER_MULTI') {
-    return 'camulti-token'
-  }
-
-  if (username.includes('CA')) {
-    return 'ca-token'
-  }
-
-  if (username === 'RO_USER_TEST') {
-    return 'rotest-token'
-  }
-
-  if (username === 'RO_USER_MULTI') {
-    return 'romulti-token'
-  }
-
-  if (username.includes('RO')) {
-    return 'ro-token'
-  }
-
-  if (username === 'DM_USER_TEST') {
-    return 'dmtest-token'
-  }
-
-  if (username === 'DM_USER_MULTI') {
-    return 'dmmulti-token'
-  }
-
-  if (username.includes('DM')) {
-    return 'dm-token'
-  }
+  return `${username}-token`;
 }
