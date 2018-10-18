@@ -3,8 +3,11 @@ const router = express.Router();
 const fs = require('fs');
 
 router.get('/:imageId', function(req, res) {
+
+    const {imageId} = req.params;
+console.log("BOOM ", imageId)
     res.send({
-        "imageId": 1,
+        imageId,
         "captureDate": "2017-07-05",
         "imageView": "view",
         "imageOrientation": "orientation",
@@ -15,7 +18,11 @@ router.get('/:imageId', function(req, res) {
 });
 
 router.get('/:imageId/data', function(req, res) {
-    const src = fs.createReadStream('routes/images/jim.png');
+
+    const id = Number(req.params.imageId) - 1;
+    const people = ['jim', 'eddie', 'pete', 'julian', 'stephen', 'mike'];
+
+    const src = fs.createReadStream(`routes/images/${people[id]}.png`);
     src.pipe(res);
 });
 

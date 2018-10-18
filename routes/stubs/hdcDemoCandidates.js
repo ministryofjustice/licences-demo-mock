@@ -31,7 +31,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 2,
         "sentenceDetail": {
             "bookingId": 1200616,
             "conditionalReleaseDate": moment().add(14, 'months').format("YYYY-MM-DD"),
@@ -52,7 +52,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 3,
         "sentenceDetail": {
             "bookingId": 1200649,
             "conditionalReleaseDate": moment().add(11, 'months').format("YYYY-MM-DD"),
@@ -94,7 +94,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 4,
         "sentenceDetail": {
             "bookingId": 1200669,
             "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
@@ -115,7 +115,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 6,
         "sentenceDetail": {
             "bookingId": 1129006,
             "conditionalReleaseDate": moment().add(28, 'months').format("YYYY-MM-DD"),
@@ -136,7 +136,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 5,
         "sentenceDetail": {
             "bookingId": 1088811,
             "conditionalReleaseDate": moment().add(53, 'months').format("YYYY-MM-DD"),
@@ -157,7 +157,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 3,
         "sentenceDetail": {
             "bookingId": 1200667,
             "conditionalReleaseDate": moment().add(16, 'months').format("YYYY-MM-DD"),
@@ -178,7 +178,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 4,
         "sentenceDetail": {
             "bookingId": 1062084,
             "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
@@ -199,7 +199,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 2,
         "sentenceDetail": {
             "bookingId": 1200642,
             "conditionalReleaseDate": moment().add(119, 'weeks').format("YYYY-MM-DD"),
@@ -220,7 +220,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 4,
         "sentenceDetail": {
             "bookingId": 1110602,
             "conditionalReleaseDate": moment().add(6, 'weeks').format("YYYY-MM-DD"),
@@ -241,7 +241,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 6,
         "sentenceDetail": {
             "bookingId": 1200668,
             "conditionalReleaseDate": moment().add(15, 'months').format("YYYY-MM-DD"),
@@ -262,7 +262,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 2,
         "sentenceDetail": {
             "bookingId": 1165795,
             "conditionalReleaseDate": moment().add(12, 'months').format("YYYY-MM-DD"),
@@ -283,7 +283,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 5,
         "sentenceDetail": {
             "bookingId": 2200635,
             "conditionalReleaseDate": moment().add(22, 'weeks').format("YYYY-MM-DD"),
@@ -304,7 +304,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 6,
         "sentenceDetail": {
             "bookingId": 1173571,
             "conditionalReleaseDate": moment().add(23, 'weeks').format("YYYY-MM-DD"),
@@ -325,7 +325,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 3,
         "sentenceDetail": {
             "bookingId": 1167792,
             "conditionalReleaseDate": moment().add(8, 'months').format("YYYY-MM-DD"),
@@ -367,7 +367,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 2,
         "sentenceDetail": {
             "bookingId": 1200666,
             "conditionalReleaseDate": moment().add(53, 'weeks').format("YYYY-MM-DD"),
@@ -388,7 +388,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 3,
         "sentenceDetail": {
             "bookingId": 1068733,
             "conditionalReleaseDate": moment().add(28, 'weeks').format("YYYY-MM-DD"),
@@ -409,7 +409,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 6,
         "sentenceDetail": {
             "bookingId": 1152613,
             "conditionalReleaseDate": moment().add(24, 'weeks').format("YYYY-MM-DD"),
@@ -451,7 +451,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 5,
         "sentenceDetail": {
             "bookingId": 1068236,
             "conditionalReleaseDate": moment().add(95, 'weeks').format("YYYY-MM-DD"),
@@ -472,7 +472,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 3,
         "sentenceDetail": {
             "bookingId": 1200659,
             "conditionalReleaseDate": moment().add(77, 'weeks').format("YYYY-MM-DD"),
@@ -493,7 +493,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 4,
         "sentenceDetail": {
             "bookingId": 1200637,
             "conditionalReleaseDate": moment().add(81, 'weeks').format("YYYY-MM-DD"),
@@ -535,7 +535,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 2,
         "sentenceDetail": {
             "bookingId": 1200617,
             "conditionalReleaseDate": moment().add(13, 'weeks').format("YYYY-MM-DD"),
@@ -556,7 +556,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 5,
         "sentenceDetail": {
             "bookingId": 1200645,
             "conditionalReleaseDate": moment().add(100, 'weeks').format("YYYY-MM-DD"),
@@ -577,7 +577,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 4,
         "sentenceDetail": {
             "bookingId": 1173494,
             "conditionalReleaseDate": moment().add(40, 'months').format("YYYY-MM-DD"),
@@ -598,7 +598,7 @@ module.exports = [
         "agencyLocationId": "LT1",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
-        "facialImageId": 1,
+        "facialImageId": 5,
         "sentenceDetail": {
             "bookingId": 1131447,
             "conditionalReleaseDate": moment().add(39, 'months').format("YYYY-MM-DD"),
@@ -610,4 +610,4 @@ module.exports = [
             "topupSupervisionExpiryDate": "2020-10-15"
         }
     }
-]
+];
