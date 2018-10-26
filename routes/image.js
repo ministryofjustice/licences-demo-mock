@@ -5,7 +5,7 @@ const fs = require('fs');
 router.get('/:imageId', function(req, res) {
 
     const {imageId} = req.params;
-console.log("BOOM ", imageId)
+
     res.send({
         imageId,
         "captureDate": "2017-07-05",

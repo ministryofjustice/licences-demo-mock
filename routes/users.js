@@ -2,76 +2,27 @@ const express = require('express');
 const jwtDecode = require('jwt-decode');
 const router = express.Router();
 const profiles = {
-  CA_USER: {
+  CA: {
     "firstName": "Catherine",
     "lastName": "Amos",
     "staffId": "100",
     "email": "CA-DEMO@work",
-    "activeCaseLoadId": "CA-DEMO",
+    "activeCaseLoadId": "BEL",
   },
-  CA_USER_TEST: {
-    "firstName": "User",
-    "lastName": "CA_USER",
-    "staffId": "2",
-    "email": "CA_USER@work",
-    "activeCaseLoadId": "DEF",
-  },
-  CA_USER_MULTI: {
-    "firstName": "User",
-    "lastName": "CA_USER_MULTI",
-    "staffId": "2",
-    "email": "CA_USER@work",
-    "activeCaseLoadId": "DEF",
-  },
-  RO_DEMO: {
+  RO: {
     "firstName": "Ryan",
     "lastName": "Orton",
     "staffId": "1",
     "email": "RO_USER@work",
-    "activeCaseLoadId": "ABC",
+    "activeCaseLoadId": "BEL",
   },
-  RO_USER_TEST: {
-    "firstName": "User",
-    "lastName": "RO_USER",
-    "staffId": "2",
-    "email": "RO_USER@work",
-    "activeCaseLoadId": "ABC",
-  },
-  RO_USER_MULTI: {
-    "firstName": "User",
-    "lastName": "ROUSER_MULTI",
-    "staffId": "1",
-    "email": "RO_USER@work",
-    "activeCaseLoadId": "ABC",
-  },
-  RO_USER: {
-    "firstName": "Ryan",
-    "lastName": "Orton",
-    "staffId": "1",
-    "email": "RO_USER@work",
-    "activeCaseLoadId": "ABC",
-  },
-  DM_USER_TEST: {
-    "firstName": "User",
-    "lastName": "DM_USER",
-    "staffId": "3",
-    "email": "DM_USER@work",
-    "activeCaseLoadId": "GHI",
-  },
-  DM_USER_MULTI: {
-    "firstName": "User",
-    "lastName": "DMUSER_MULTI",
-    "staffId": "3",
-    "email": "DM_USER@work",
-    "activeCaseLoadId": "GHI",
-  },
-  DM_USER: {
-    "firstName": "Dianne",
+  DM: {
+    "firstName": "Diane",
     "lastName": "Matthews",
     "staffId": "3",
     "email": "DM_USER@work",
-    "activeCaseLoadId": "GHI",
-  },
+    "activeCaseLoadId": "BEL",
+  }
 };
 
 const roles = {
@@ -105,26 +56,43 @@ router.get('/me/roles', function(req, res) {
   res.send(role)
 });
 
+router.get('/me/caseLoads', function(req, res) {
+  res.send([
+    {
+      "caseLoadId": "DEF",
+      "description": "Askham Grange",
+      "type": "string",
+      "caseloadFunction": "string"
+    },
+    {
+      "caseLoadId": "BEL",
+      "description": "Belmarsh",
+      "type": "string",
+      "caseloadFunction": "string"
+    }
+  ])
+});
+
 function getProfile(token) {
   return findFirstFromToken(token, profiles);
 }
 
 function getRoleCode(token) {
-  const roleCode = findFirstFromToken(token, roles, 'ROLE');
+  const roleCode = findFirstFromToken(token, roles);
   return roleCode ? [roleCode] : [];
 }
 
-function findFirstFromToken(token, roleHash, type = 'PROFILE') {
+function findFirstFromToken(token, roleHash) {
   // Authorization expected to be of form 'Bearer x'
   const accessToken = token.split(' ')[1];
   try {
     // try for a real jwt to get the roles from
     const jwt = jwtDecode(accessToken);
-    const lookup = type === 'ROLE' ? jwt.user_name.substring(0, 2) : jwt.user_name;
+    const lookup = jwt.user_name.substring(0, 2);
     return roleHash[lookup];
   } catch (error) {
     // otherwise fallback to a ca_token, ro_token, dm_token
-    const lookup = type === 'ROLE' ? accessToken.substring(0, 2) : accessToken.replace('-token', '');
+    const lookup = accessToken.substring(0, 2);
     return roleHash[lookup];
   }
 }
