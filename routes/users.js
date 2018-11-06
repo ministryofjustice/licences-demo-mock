@@ -22,28 +22,39 @@ const profiles = {
     "staffId": "3",
     "email": "DM_USER@work",
     "activeCaseLoadId": "BEL",
+  },
+  NO: {
+    "firstName": "Norman",
+    "lastName": "Bates",
+    "staffId": "4",
+    "email": "BATCHLOAD_USER@work",
+    "activeCaseLoadId": "BEL",
   }
 };
 
 const roles = {
-  CA: {
-    "roleId": 0,
-    "roleName": "string",
+  CA: [{
     "roleCode": "LEI_LICENCE_CA",
-    "parentRoleCode": "string",
-  },
-  RO: {
+  }, {
+    "roleCode": "LEI_LICENCE_RO"
+  }, {
+    "roleCode": "LEI_LICENCE_DM"
+  }],
+  RO: [{
     "roleId": 0,
     "roleName": "string",
     "roleCode": "LEI_LICENCE_RO",
     "parentRoleCode": "string",
-  },
-  DM: {
+  }],
+  DM: [{
     "roleId": 0,
     "roleName": "string",
     "roleCode": "LEI_LICENCE_DM",
     "parentRoleCode": "string",
-  },
+  }],
+  NO: [{
+    "roleCode": "LEI_LICENCE_BATCHLOAD",
+  }]
 };
 
 router.get('/me', function(req, res) {
@@ -79,7 +90,7 @@ function getProfile(token) {
 
 function getRoleCode(token) {
   const roleCode = findFirstFromToken(token, roles);
-  return roleCode ? [roleCode] : [];
+  return roleCode ? roleCode : [];
 }
 
 function findFirstFromToken(token, roleHash) {
