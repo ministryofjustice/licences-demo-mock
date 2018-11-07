@@ -23,7 +23,14 @@ const profiles = {
     "email": "DM_USER@work",
     "activeCaseLoadId": "BEL",
   },
-  NO: {
+  NOMIS: {
+    "firstName": "Norman",
+    "lastName": "Bates",
+    "staffId": "4",
+    "email": "BATCHLOAD_USER@work",
+    "activeCaseLoadId": "BEL",
+  },
+  NONE: {
     "firstName": "Norman",
     "lastName": "Bates",
     "staffId": "4",
@@ -52,9 +59,10 @@ const roles = {
     "roleCode": "LEI_LICENCE_DM",
     "parentRoleCode": "string",
   }],
-  NO: [{
+  NOMIS: [{
     "roleCode": "LEI_LICENCE_BATCHLOAD",
-  }]
+  }],
+  NONE: []
 };
 
 router.get('/me', function(req, res) {
@@ -109,7 +117,7 @@ function findFirstFromToken(token, roleHash) {
     return roleHash[lookup];
   } catch (error) {
     // otherwise fallback to a ca_token, ro_token, dm_token
-    const lookup = accessToken.substring(0, 2);
+    const lookup = accessToken.substring(0, accessToken.indexOf('_'));
     return roleHash[lookup];
   }
 }
