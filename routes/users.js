@@ -84,6 +84,12 @@ router.get('/me/caseLoads', function(req, res) {
   ])
 });
 
+router.put('/me/activeCaseLoad', function(req, res) {
+  res.send({
+    'caseLoadId': req.body.caseLoadId
+  })
+});
+
 function getProfile(token) {
   return findFirstFromToken(token, profiles);
 }
