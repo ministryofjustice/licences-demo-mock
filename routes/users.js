@@ -71,8 +71,8 @@ router.get('/me', function(req, res) {
 });
 
 router.get('/me/roles', function(req, res) {
-    const role = getRoleCode(req.headers.authorization);
-    res.send(role)
+  const role = getRoleCode(req.headers.authorization);
+  res.send(role)
 });
 
 router.get('/me/caseLoads', function(req, res) {
@@ -99,7 +99,7 @@ router.put('/me/activeCaseLoad', function(req, res) {
 });
 
 function getProfile(token) {
-    return findFirstFromToken(token, profiles);
+  return findFirstFromToken(token, profiles);
 }
 
 function getRoleCode(token) {
