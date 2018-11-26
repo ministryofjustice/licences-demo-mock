@@ -19,6 +19,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res, next) {
+  console.log(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/elite2api/oauth', oauthRouter);
 app.use('/elite2api/users', usersRouter);
@@ -34,6 +39,14 @@ app.get('/elite2api/health', (req, res) => {
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+
+  console.log();
+  console.log('UNMATCHED:');
+  console.log(req.method);
+  console.log(req.originalUrl);
+  console.log(req.body);
+  console.log(req.headers);
+
   next(createError(404));
 });
 

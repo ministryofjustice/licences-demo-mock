@@ -66,8 +66,8 @@ const roles = {
 };
 
 router.get('/me', function(req, res) {
-  const profile = getProfile(req.headers.authorization);
-  res.send(profile)
+    const profile = getProfile(req.headers.authorization);
+    res.send(profile)
 });
 
 router.get('/me/roles', function(req, res) {
