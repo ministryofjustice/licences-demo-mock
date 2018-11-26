@@ -60,7 +60,7 @@ const roles = {
     "parentRoleCode": "string",
   }],
   NOMIS: [{
-    "roleCode": "LEI_LICENCE_BATCHLOAD",
+    "roleCode": "NOMIS_BATCHLOAD",
   }],
   NONE: []
 };
