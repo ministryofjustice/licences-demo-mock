@@ -20,7 +20,7 @@ router.get('/:imageId', function(req, res) {
 router.get('/:imageId/data', function(req, res) {
 
     const id = Number(req.params.imageId) - 1;
-    const people = ['jim', 'eddie', 'pete', 'julian', 'stephen', 'mike'];
+    const people = ['jim', 'eddie', 'pete', 'julian', 'stephen', 'mike', 'del'];
 
     const src = fs.createReadStream(`routes/images/${people[id]}.png`);
     src.pipe(res);
