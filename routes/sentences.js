@@ -17,7 +17,6 @@ router.post('/bookings', function (req, res) {
 
   const bookingNumbers = req.body.map(Number);
   if (bookingNumbers.includes(1)) {
-
     return res.send([
       {
         "bookingId": 1,
@@ -30,7 +29,33 @@ router.post('/bookings', function (req, res) {
         "internalLocationDesc": "A-1-1",
         "facialImageId": 7,
         "sentenceDetail": {
-          "bookingId": 1131447,
+          "bookingId": 1,
+          "conditionalReleaseDate": "2015-11-14",
+          "homeDetentionCurfewEligibilityDate": "2016-11-14",
+          "automaticReleaseDate": "2020-02-02",
+          "homeDetentionCurfewActualDate": "2020-09-13",
+          "sentenceExpiryDate": "2020-05-24",
+          "licenceExpiryDate": "2020-05-02",
+          "topupSupervisionExpiryDate": "2020-10-15"
+        },
+        "released": 'true'
+      }
+    ]);
+  }
+  if (bookingNumbers.includes(2)) {
+    return res.send([
+      {
+        "bookingId": 2,
+        "offenderNo": "A111111",
+        "firstName": "RODNEY",
+        "lastName": "TROTTER",
+        "dateOfBirth": "1950-10-22",
+        "agencyLocationId": "LT1",
+        "agencyLocationDesc": "Licence Auto Test Prison",
+        "internalLocationDesc": "A-1-1",
+        "facialImageId": 8,
+        "sentenceDetail": {
+          "bookingId": 2,
           "conditionalReleaseDate": "2015-11-14",
           "homeDetentionCurfewEligibilityDate": "2016-11-14",
           "automaticReleaseDate": "2020-02-02",
