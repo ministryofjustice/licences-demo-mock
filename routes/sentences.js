@@ -24,7 +24,7 @@ router.post('/bookings', function (req, res) {
         "firstName": "DERECK",
         "lastName": "TROTTER",
         "dateOfBirth": "1950-10-22",
-        "agencyLocationId": "LT1",
+        "agencyLocationId": "out",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
         "facialImageId": 7,
@@ -37,8 +37,7 @@ router.post('/bookings', function (req, res) {
           "sentenceExpiryDate": "2020-05-24",
           "licenceExpiryDate": "2020-05-02",
           "topupSupervisionExpiryDate": "2020-10-15"
-        },
-        "released": 'true'
+        }
       }
     ]);
   }
@@ -50,7 +49,7 @@ router.post('/bookings', function (req, res) {
         "firstName": "RODNEY",
         "lastName": "TROTTER",
         "dateOfBirth": "1950-10-22",
-        "agencyLocationId": "LT1",
+        "agencyLocationId": "out",
         "agencyLocationDesc": "Licence Auto Test Prison",
         "internalLocationDesc": "A-1-1",
         "facialImageId": 8,
