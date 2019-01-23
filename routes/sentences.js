@@ -21,7 +21,7 @@ router.post('/bookings', function (req, res) {
       {
         "bookingId": 1,
         "offenderNo": "A111111",
-        "firstName": "DERECK",
+        "firstName": "DEREK",
         "lastName": "TROTTER",
         "dateOfBirth": "1950-10-22",
         "agencyLocationId": "out",
