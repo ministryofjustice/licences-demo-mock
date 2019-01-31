@@ -41,6 +41,10 @@ app.get('/elite2api/health', (req, res) => {
   res.send({status: 'UP'});
 });
 
+router.get('/elite2api/api/health', (req, res) => {
+  res.send({status: 'UP'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 
