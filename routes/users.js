@@ -56,7 +56,7 @@ const roles = {
   {
     "roleId": 0,
     "roleName": "string",
-    "roleCode": "LICENCES_RO",
+    "roleCode": "LICENCE_RO",
     "parentRoleCode": "string",
   }],
   DM: [{
