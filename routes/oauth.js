@@ -17,6 +17,10 @@ router.post('/token', function (req, res) {
   });
 });
 
+router.get('/health', (req, res) => {
+  res.send({status: 'UP'});
+});
+
 module.exports = router;
 
 function getToken(username) {
