@@ -37,7 +37,7 @@ app.use('/elite2api/api/offender-relationships', relationshipsRouter);
 app.use('/elite2api/api/agencies', agenciesRouter);
 app.use('/elite2api/api/movements', movementsRouter);
 app.use('/elite2api/api/prisoners', prisonersRouter);
-app.get('/elite2api/api/health', (req, res) => {
+app.get('/elite2api/health', (req, res) => {
   res.send({status: 'UP'});
 });
 
