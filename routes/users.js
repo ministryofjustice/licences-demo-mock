@@ -43,7 +43,7 @@ const roles = {
   CA: [{
     "roleCode": "LEI_LICENCE_CA",
   }, {
-    "roleCode": "LICENCES_RO"
+    "roleCode": "LICENCE_RO"
   }, {
     "roleCode": "LEI_LICENCE_DM"
   }],
