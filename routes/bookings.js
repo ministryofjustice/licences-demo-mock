@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 router.get('/:bookingId/aliases', function(req, res) {
     res.send([
@@ -71,6 +72,21 @@ router.get('/:bookingId/relationships', function(req, res) {
             "personId": 123
         }
     ])
+});
+
+router.get('/offenderNo/:imageId/image/data', function(req, res) {
+    const {imageId} = req.params;
+    const id = (() => {
+        if (imageId == 222222) {
+            return 'rodders'
+        }
+        if (imageId == 111111) {
+            return 'del'
+        }
+    })();
+console.log(id)
+    const src = fs.createReadStream(`routes/images/${id}.png`);
+    src.pipe(res);
 });
 
 

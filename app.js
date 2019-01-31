@@ -8,6 +8,8 @@ const oauthRouter = require('./routes/oauth');
 const sentencesRouter = require('./routes/sentences');
 const bookingsRouter = require('./routes/bookings');
 const personsRouter = require('./routes/persons');
+const movementsRouter = require('./routes/movements');
+const prisonersRouter = require('./routes/prisoners');
 const imagesRouter = require('./routes/image');
 const relationshipsRouter = require('./routes/relationships');
 const agenciesRouter = require('./routes/agencies');
@@ -25,15 +27,17 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/elite2api/oauth', oauthRouter);
-app.use('/elite2api/users', usersRouter);
-app.use('/elite2api/offender-sentences', sentencesRouter);
-app.use('/elite2api/bookings', bookingsRouter);
-app.use('/elite2api/persons', personsRouter);
-app.use('/elite2api/images', imagesRouter);
-app.use('/elite2api/offender-relationships', relationshipsRouter);
-app.use('/elite2api/agencies', agenciesRouter);
-app.get('/elite2api/health', (req, res) => {
+app.use('/elite2api/api/oauth', oauthRouter);
+app.use('/elite2api/api/users', usersRouter);
+app.use('/elite2api/api/offender-sentences', sentencesRouter);
+app.use('/elite2api/api/bookings', bookingsRouter);
+app.use('/elite2api/api/persons', personsRouter);
+app.use('/elite2api/api/images', imagesRouter);
+app.use('/elite2api/api/offender-relationships', relationshipsRouter);
+app.use('/elite2api/api/agencies', agenciesRouter);
+app.use('/elite2api/api/movements', movementsRouter);
+app.use('/elite2api/api/prisoners', prisonersRouter);
+app.get('/elite2api/api/health', (req, res) => {
   res.send({status: 'UP'});
 });
 
