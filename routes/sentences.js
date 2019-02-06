@@ -91,5 +91,14 @@ router.get('/bookings/:bookingId/aliases', function (req, res) {
   ])
 });
 
+router.put('/booking/:bookingId/home-detention-curfews/latest/approval-status', (req, res) => {
+  const {approvalStatus} = req.body;
+  const {bookingId} = req.params;
+
+  res.send({
+    approvalStatus,
+    bookingId
+  })
+});
 
 module.exports = router;
