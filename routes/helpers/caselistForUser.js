@@ -1,28 +1,28 @@
-const hdcDemoCandidates = require('../stubs/hdcDemoCandidates');
-const hdcTestCandidates = require('../stubs/hdcTestCandidates');
-const hdcMultiCandidates = require('../stubs/hdcMultiCandidates');
-const jwtDecode = require('jwt-decode');
+const jwtDecode = require('jwt-decode')
+const hdcDemoCandidates = require('../stubs/hdcDemoCandidates')
+const hdcTestCandidates = require('../stubs/hdcTestCandidates')
+const hdcMultiCandidates = require('../stubs/hdcMultiCandidates')
 
-module.exports = (token) => {
-  const accessToken = token.split(' ')[1];
+module.exports = token => {
+  const accessToken = token.split(' ')[1]
 
-  let username;
+  let username
   try {
     // try for a real jwt to get the roles from
-    const jwt = jwtDecode(accessToken);
-    username = jwt.user_name;
+    const jwt = jwtDecode(accessToken)
+    username = jwt.user_name
   } catch (error) {
     // otherwise fallback to grabbing username from token
-    username = accessToken.replace('-token', '');
+    username = accessToken.replace('-token', '')
   }
 
   if (username.includes('_TEST')) {
-    return hdcTestCandidates;
+    return hdcTestCandidates
   }
 
   if (username.includes('_MULTI')) {
-    return hdcMultiCandidates;
+    return hdcMultiCandidates
   }
 
-  return hdcDemoCandidates;
-};
+  return hdcDemoCandidates
+}

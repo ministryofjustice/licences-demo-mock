@@ -1,11 +1,14 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
 
-router.get('/:bookingId/identifiers', function(req, res) {
-    res.send([{
-        "identifierType": "EXTERNAL_REL",
-        "identifierValue": "DELIUS_ID"
-    }])
-});
+const router = express.Router()
 
-module.exports = router;
+router.get('/:bookingId/identifiers', (req, res) => {
+  res.send([
+    {
+      identifierType: 'EXTERNAL_REL',
+      identifierValue: 'DELIUS_ID',
+    },
+  ])
+})
+
+module.exports = router
