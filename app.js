@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const authUserRouter = require('./routes/authuser');
 const oauthRouter = require('./routes/oauth');
 const sentencesRouter = require('./routes/sentences');
 const bookingsRouter = require('./routes/bookings');
@@ -29,6 +30,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/elite2api/api/oauth', oauthRouter);
 app.use('/elite2api/api/users', usersRouter);
+app.use('/elite2api/api/api/user', authUserRouter);
 app.use('/elite2api/api/offender-sentences', sentencesRouter);
 app.use('/elite2api/api/bookings', bookingsRouter);
 app.use('/elite2api/api/persons', personsRouter);
