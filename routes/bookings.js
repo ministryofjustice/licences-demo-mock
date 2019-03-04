@@ -77,16 +77,8 @@ router.get('/:bookingId/relationships', (req, res) => {
 
 router.get('/offenderNo/:imageId/image/data', (req, res) => {
   const { imageId } = req.params
-  const id = (() => {
-    if (imageId === 222222) {
-      return 'rodders'
-    }
-    if (imageId === 111111) {
-      return 'del'
-    }
-    return undefined
-  })()
-  console.log(id)
+  const id = imageId === '111111' ? 'del' : 'rodders'
+
   const src = fs.createReadStream(`routes/images/${id}.png`)
   src.pipe(res)
 })
