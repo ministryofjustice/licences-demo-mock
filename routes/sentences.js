@@ -91,11 +91,23 @@ router.get('/bookings/:bookingId/aliases', (req, res) => {
 })
 
 router.put('/booking/:bookingId/home-detention-curfews/latest/approval-status', (req, res) => {
-  const { approvalStatus } = req.body
+  const { approvalStatus, date } = req.body
   const { bookingId } = req.params
 
   res.send({
     approvalStatus,
+    date,
+    bookingId,
+  })
+})
+
+router.put('/booking/:bookingId/home-detention-curfews/latest/checks-passed', (req, res) => {
+  const { passed, date } = req.body
+  const { bookingId } = req.params
+
+  res.send({
+    passed,
+    date,
     bookingId,
   })
 })
