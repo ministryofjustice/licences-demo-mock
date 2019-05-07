@@ -3,6 +3,10 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')
 
+router.get('/:bookingId', (req, res) => {
+  res.send({ offenderNo: '111111' })
+})
+
 router.get('/:bookingId/aliases', (req, res) => {
   res.send([
     {
