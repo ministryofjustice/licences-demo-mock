@@ -4,7 +4,15 @@ const router = express.Router()
 const fs = require('fs')
 
 router.get('/:bookingId', (req, res) => {
-  res.send({ offenderNo: '111111' })
+  const { bookingId } = req.params
+  if (bookingId === 1) {
+    return res.send({ offenderNo: 'A111111' })
+  }
+  if (bookingId === 2) {
+    return res.send({ offenderNo: 'A222222' })
+  }
+
+  return res.send({ offenderNo: 'ABC123' })
 })
 
 router.get('/:bookingId/aliases', (req, res) => {

@@ -4,6 +4,51 @@ const router = express.Router()
 const getCaselist = require('./helpers/caselistForUser')
 const hdcSearchableCanditates = require('./stubs/hdcSearchableCandidates')
 
+const booking1 = {
+  bookingId: 1,
+  offenderNo: 'A111111',
+  firstName: 'DEREK',
+  lastName: 'TROTTER',
+  dateOfBirth: '1950-10-22',
+  agencyLocationId: 'out',
+  agencyLocationDesc: 'Licence Auto Test Prison',
+  internalLocationDesc: 'A-1-1',
+  facialImageId: 7,
+  sentenceDetail: {
+    bookingId: 1,
+    conditionalReleaseDate: '2015-11-14',
+    homeDetentionCurfewEligibilityDate: '2016-11-14',
+    automaticReleaseDate: '2020-02-02',
+    homeDetentionCurfewActualDate: '2020-09-13',
+    sentenceExpiryDate: '2020-05-24',
+    licenceExpiryDate: '2020-05-02',
+    topupSupervisionExpiryDate: '2020-10-15',
+  },
+}
+
+const booking2 = {
+  bookingId: 2,
+  offenderNo: 'A222222',
+  firstName: 'RODNEY',
+  lastName: 'TROTTER',
+  dateOfBirth: '1950-10-22',
+  agencyLocationId: 'out',
+  agencyLocationDesc: 'Licence Auto Test Prison',
+  internalLocationDesc: 'A-1-1',
+  facialImageId: 8,
+  sentenceDetail: {
+    bookingId: 2,
+    conditionalReleaseDate: '2015-11-14',
+    homeDetentionCurfewEligibilityDate: '2016-11-14',
+    automaticReleaseDate: '2020-02-02',
+    homeDetentionCurfewActualDate: '2020-09-13',
+    sentenceExpiryDate: '2020-05-24',
+    licenceExpiryDate: '2020-05-02',
+    topupSupervisionExpiryDate: '2020-10-15',
+  },
+  released: 'true',
+}
+
 router.get('/', (req, res) => {
   res.send([hdcSearchableCanditates.find(candidate => candidate.offenderNo === req.query.offenderNo)])
 })
@@ -14,58 +59,22 @@ router.get('/home-detention-curfew-candidates', (req, res) => {
   res.send(caselist)
 })
 
+router.post('/', (req, res) => {
+  const offenderNumbers = req.body
+
+  const caselist = getCaselist(req.headers.authorization)
+  const candidates = caselist.filter(candidate => offenderNumbers.includes(candidate.offenderNo))
+
+  return res.send(candidates)
+})
+
 router.post('/bookings', (req, res) => {
   const bookingNumbers = req.body.map(Number)
   if (bookingNumbers.includes(1)) {
-    return res.send([
-      {
-        bookingId: 1,
-        offenderNo: 'A111111',
-        firstName: 'DEREK',
-        lastName: 'TROTTER',
-        dateOfBirth: '1950-10-22',
-        agencyLocationId: 'out',
-        agencyLocationDesc: 'Licence Auto Test Prison',
-        internalLocationDesc: 'A-1-1',
-        facialImageId: 7,
-        sentenceDetail: {
-          bookingId: 1,
-          conditionalReleaseDate: '2015-11-14',
-          homeDetentionCurfewEligibilityDate: '2016-11-14',
-          automaticReleaseDate: '2020-02-02',
-          homeDetentionCurfewActualDate: '2020-09-13',
-          sentenceExpiryDate: '2020-05-24',
-          licenceExpiryDate: '2020-05-02',
-          topupSupervisionExpiryDate: '2020-10-15',
-        },
-      },
-    ])
+    return res.send([booking1])
   }
   if (bookingNumbers.includes(2)) {
-    return res.send([
-      {
-        bookingId: 2,
-        offenderNo: 'A111111',
-        firstName: 'RODNEY',
-        lastName: 'TROTTER',
-        dateOfBirth: '1950-10-22',
-        agencyLocationId: 'out',
-        agencyLocationDesc: 'Licence Auto Test Prison',
-        internalLocationDesc: 'A-1-1',
-        facialImageId: 8,
-        sentenceDetail: {
-          bookingId: 2,
-          conditionalReleaseDate: '2015-11-14',
-          homeDetentionCurfewEligibilityDate: '2016-11-14',
-          automaticReleaseDate: '2020-02-02',
-          homeDetentionCurfewActualDate: '2020-09-13',
-          sentenceExpiryDate: '2020-05-24',
-          licenceExpiryDate: '2020-05-02',
-          topupSupervisionExpiryDate: '2020-10-15',
-        },
-        released: 'true',
-      },
-    ])
+    return res.send([booking2])
   }
 
   const caselist = getCaselist(req.headers.authorization)
