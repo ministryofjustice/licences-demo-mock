@@ -10,7 +10,11 @@ module.exports = token => {
   try {
     // try for a real jwt to get the roles from
     const jwt = jwtDecode(accessToken)
-    username = jwt.user_name
+    if (jwt.user_name) {
+      username = jwt.user_name
+    } else if (jwt.auth_source === 'none' && jwt.client_id === 'licencesadmin') {
+      return hdcTestCandidates
+    }
   } catch (error) {
     // otherwise fallback to grabbing username from token
     username = accessToken.replace('-token', '')

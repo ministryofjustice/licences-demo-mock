@@ -1,26 +1,59 @@
 const express = require('express')
 
 const router = express.Router()
-const getCaselist = require('./helpers/caselistForUser')
 
 router.get('/staff/staffCode/:staffCode/managedOffenders', (req, res) => {
-  const caselist = getCaselist(req.headers.authorization)
+  const { staffCode } = req.params
+  const { current } = req.query
 
-  res.send(caselist)
+  const offenders = [
+    {
+      staffCode,
+      offenderId: 1234567,
+      nomsNumber: 'A5001DY',
+      crnNumber: 1234567,
+      offenderSurname: 'Andrews',
+      isCurrentRo: current,
+      isCurrentOm: current,
+      isCurrentPom: current,
+      omStartDate: '01/01/2001',
+      omEndDate: '01/01/2001',
+    },
+  ]
+
+  res.send(offenders)
 })
 
-router.get('/offenders/nomsNumber/:nomsId/responsibleOfficer', (req, res) => {
-  const ro = {
-    username: 'RO_USER',
-    staffCode: 'DELIUS_ID',
-    forenames: 'Ryan',
-    surname: 'Orton',
-  }
+router.get('/offenders/nomsNumber/:nomsNumber/responsibleOfficers', (req, res) => {
+  const { nomsNumber } = req.params
+  const { current } = req.query
+  const ros = [
+    {
+      nomsNumber,
+      responsibleOfficerId: '12345',
+      offenderManagerId: '12345',
+      prisonOffenderManagerId: '12345',
+      staffCode: 'DELIUS_ID',
+      surname: 'Orton',
+      forenames: 'Ryan',
+      providerTeamCode: 'providerTeamCode',
+      providerTeamDescription: 'provider team description',
+      lduCode: 'lduCode',
+      lduDescription: 'lduDescription',
+      probationAreaCode: 'probationAreaCode',
+      probationAreaDescription: 'probationAreaDescription',
+      isCurrentRo: current,
+      isCurrentOm: current,
+      isCurrentPom: current,
+      omStartDate: '01/01/2001',
+      omEndDate: '01/01/2001',
+    },
+  ]
 
-  res.send(ro)
+  res.send(ros)
 })
 
-router.get('/health', (req, res) => {
+router.get('/remote-status', (req, res) => {
   res.send({ status: 'UP' })
 })
 
