@@ -51,7 +51,7 @@ router.get('/offenders/nomsNumber/:nomsNumber/responsibleOfficers', (req, res) =
   res.send(ros)
 })
 
-router.get('/remote-status', (req, res) => {
+router.get('/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
