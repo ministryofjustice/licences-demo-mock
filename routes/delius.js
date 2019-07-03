@@ -51,8 +51,4 @@ router.get('/offenders/nomsNumber/:nomsNumber/responsibleOfficers', (req, res) =
   res.send(ros)
 })
 
-router.get('/health', (req, res) => {
-  res.send({ status: 'UP' })
-})
-
 module.exports = router

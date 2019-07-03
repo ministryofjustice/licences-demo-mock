@@ -48,7 +48,7 @@ app.get('/elite2api/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
-app.get('/elite2api/api/health', (req, res) => {
+app.get('/communityapi/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
