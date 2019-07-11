@@ -52,8 +52,8 @@ app.get('/elite2api/ping', (req, res) => {
   res.send('pong')
 })
 
-app.get('/communityapi/health', (req, res) => {
-  res.send({ status: 'UP' })
+app.get('/communityapi/ping', (req, res) => {
+  res.send('pong')
 })
 
 app.get('/pdfgenerator/ping', (req, res) => {
