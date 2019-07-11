@@ -48,6 +48,10 @@ app.get('/elite2api/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
+app.get('/elite2api/ping', (req, res) => {
+  res.send('pong')
+})
+
 app.get('/communityapi/health', (req, res) => {
   res.send({ status: 'UP' })
 })
