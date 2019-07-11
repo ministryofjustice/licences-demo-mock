@@ -56,6 +56,10 @@ app.get('/communityapi/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
+app.get('/pdfgernerator/health', (req, res) => {
+  res.send({ status: 'UP' })
+})
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   console.log()
