@@ -56,7 +56,7 @@ app.get('/communityapi/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
-app.get('/pdfgernerator/health', (req, res) => {
+app.get('/pdfgenerator/health', (req, res) => {
   res.send({ status: 'UP' })
 })
 
