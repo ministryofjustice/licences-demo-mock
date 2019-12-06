@@ -49,7 +49,7 @@ app.get('/elite2api/health', (req, res) => {
 })
 
 app.get('/probationteams/health/ping', (req, res) => {
-  res.send('pong')
+  res.send({ status: 'UP' })
 })
 
 app.get('/elite2api/ping', (req, res) => {
