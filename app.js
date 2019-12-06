@@ -56,10 +56,6 @@ app.get('/communityapi/ping', (req, res) => {
   res.send('pong')
 })
 
-app.get('/pdfgenerator/ping', (req, res) => {
-  res.send('pong')
-})
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   console.log()
