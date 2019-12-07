@@ -16,6 +16,7 @@ const imagesRouter = require('./routes/image')
 const relationshipsRouter = require('./routes/relationships')
 const agenciesRouter = require('./routes/agencies')
 const deliusRouter = require('./routes/delius')
+const probationteamsRouter = require('./routes/probationteams')
 
 const app = express()
 
@@ -43,6 +44,7 @@ app.use('/elite2api/api/movements', movementsRouter)
 app.use('/elite2api/api/prisoners', prisonersRouter)
 
 app.use('/communityapi/api', deliusRouter)
+app.use('/probationteams', probationteamsRouter)
 
 app.get('/elite2api/health', (req, res) => {
   res.send({ status: 'UP' })

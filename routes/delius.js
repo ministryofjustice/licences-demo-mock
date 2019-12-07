@@ -23,29 +23,18 @@ router.get('/staff/staffCode/:staffCode/managedOffenders', (req, res) => {
   res.send(offenders)
 })
 
-router.get('/offenders/nomsNumber/:nomsNumber/responsibleOfficers', (req, res) => {
+router.get('/offenders/nomsNumber/:nomsNumber/allOffenderManagers', (req, res) => {
   const { nomsNumber } = req.params
   const ros = [
     {
-      nomsNumber,
-      responsibleOfficerId: '12345',
-      offenderManagerId: '12345',
-      prisonOffenderManagerId: '12345',
+      isPrisonOffenderManager: false,
+      isUnallocated: false,
+      isResponsibleOfficer: true,
+      staff: { forenames: 'Ryan', surname: 'Orton'},
       staffCode: 'DELIUS_ID',
-      surname: 'Orton',
-      forenames: 'Ryan',
-      providerTeamCode: 'providerTeamCode',
-      providerTeamDescription: 'provider team description',
-      lduCode: 'lduCode',
-      lduDescription: 'lduDescription',
-      probationAreaCode: 'probationAreaCode',
-      probationAreaDescription: 'probationAreaDescription',
-      isCurrentRo: true,
-      isCurrentOm: true,
-      isCurrentPom: true,
-      omStartDate: '01/01/2001',
-      omEndDate: '01/01/2001',
-    },
+      team: { localDeliveryUnit: { code: 'lduCode', description: 'lduDescription' } },
+      probationArea: { code: 'probationAreaCode', description: 'probationAreaDescription' },
+    }
   ]
 
   res.send(ros)
