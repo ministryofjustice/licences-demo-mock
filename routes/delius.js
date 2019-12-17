@@ -1,15 +1,15 @@
 const express = require('express')
 
-const deliusTeams = [
-  {
-    code: 'TEAM_CODE',
-    description: 'The Team',
-    telephone: '01234567890',
-    localDeliveryUnit: { code: 'A', value: 'B' },
-    district: { code: 'D', value: 'E' },
-    borough: { code: 'F', value: 'G' },
-  },
-]
+const teamC01T04 = {
+  code: 'C01T04',
+  description: 'OMU A',
+  telephone: '01234567890',
+  localDeliveryUnit: { code: 'ABC124', description: 'ABC124 delivery unit' },
+  district: { code: 'D', description: 'E' },
+  borough: { code: 'F', description: 'G' },
+}
+
+const deliusTeams = [teamC01T04]
 
 const RO_USER_TEST = {
   username: 'RO_USER_TEST',
@@ -94,7 +94,7 @@ router.get('/offenders/nomsNumber/:nomsNumber/allOffenderManagers', (req, res) =
       isResponsibleOfficer: true,
       staff: { forenames: 'Ryan', surname: 'Orton' },
       staffCode: 'DELIUS_ID',
-      team: { localDeliveryUnit: { code: 'ABC124', description: 'ABC124 delivery unit' } },
+      team: teamC01T04,
       probationArea: { code: 'ABC', description: 'ABC probation area' },
     },
   ]
