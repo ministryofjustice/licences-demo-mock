@@ -2,11 +2,17 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/local-delivery-units/:lduCode/functional-mailbox', (req, res) => {
-  const { lduCode } = req.params
+router.get('/probation-areas/:probationAreaCode/local-delivery-units/:localDeliveryUnitCode', (req, res) => {
+  const { probationAreaCode, localDeliveryUnitCode } = req.params
 
   res.set('Content-Type', 'application/json')
-  res.send(`"${lduCode}@probationteams.com"`)
+
+  const response = {
+    probationAreaCode,
+    localDeliveryUnitCode,
+    functionalMailbox: `${probationAreaCode}_${localDeliveryUnitCode}@probationteams.com`,
+  }
+  res.send(response)
 })
 
 module.exports = router
