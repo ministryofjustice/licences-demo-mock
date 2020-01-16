@@ -102,4 +102,84 @@ router.get('/offenders/nomsNumber/:nomsNumber/allOffenderManagers', (req, res) =
   res.send(ros)
 })
 
+router.get('/probationAreas', (req, res) => {
+  const response = {
+    content: [
+      { code: 'Bir', description: 'Birmingham' },
+      { code: 'Lon', description: 'London' },
+      { code: 'C03', description: 'Coventry' },
+      { code: 'Nottm', description: 'Nottingham' },
+      { code: 'Shf', description: 'Sheffield' },
+      { code: 'Lds', description: 'Leeds' },
+    ],
+  }
+  res.send(response)
+})
+
+router.get('/probationAreas/code/:code/localDeliveryUnits', (req, res) => {
+  const probationAreaCode = req.params.code
+  let response
+
+  switch (probationAreaCode) {
+    case 'Lon':
+      response = {
+        content: [
+          { code: 'ham', description: 'Hampstead' },
+          { code: 'wtl', description: 'Waterloo' },
+          { code: 'pic', description: 'Picadilly' },
+        ],
+      }
+      break
+    case 'C01':
+      response = {
+        content: [
+          { code: 'cov1', description: 'cov-one' },
+          { code: 'cov2', description: 'cov-two' },
+          { code: 'cov3', description: 'cov-three' },
+        ],
+      }
+
+      break
+    case 'Shf':
+      response = {
+        content: [
+          { code: 'shf1', description: 'shf-one' },
+          { code: 'shf2', description: 'shf-two' },
+          { code: 'shf3', description: 'shf-three' },
+        ],
+      }
+
+      break
+    case 'C03':
+      response = {
+        content: [
+          { code: 'C03HART', description: 'C03-TEST-one' },
+          { code: 'C03IOM', description: 'C03-TEST-two' },
+          { code: 'C03007', description: 'C03-TEST-seven' },
+        ],
+      }
+
+      break
+    // the following do NOT have any teams assigned to them
+    case 'Bir':
+      response = {
+        content: [],
+      }
+
+      break
+    case 'Nottm':
+      response = {
+        content: [],
+      }
+
+      break
+    default:
+      response = {
+        content: [],
+      }
+  }
+
+  res.send(response)
+})
+
 module.exports = router
