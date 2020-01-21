@@ -111,6 +111,7 @@ router.get('/probationAreas', (req, res) => {
       { code: 'Nottm', description: 'Nottingham' },
       { code: 'Shf', description: 'Sheffield' },
       { code: 'Lds', description: 'Leeds' },
+      { code: 'ABC', description: 'ABC probation area' },
     ],
   }
   res.send(response)
@@ -121,6 +122,12 @@ router.get('/probationAreas/code/:code/localDeliveryUnits', (req, res) => {
   let response
 
   switch (probationAreaCode) {
+    case 'ABC':
+      response = {
+        content: [{ code: 'ABC124', description: 'ABC124 delivery unit' }],
+      }
+      break
+
     case 'Lon':
       response = {
         content: [
