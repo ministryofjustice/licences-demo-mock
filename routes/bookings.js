@@ -1,10 +1,22 @@
 const express = require('express')
+const fs = require('fs')
+
+const hdcDemoCandidates = require('./stubs/hdcDemoCandidates')
+const hdcTestCandidates = require('./stubs/hdcTestCandidates')
+const hdcMultiCandidates = require('./stubs/hdcMultiCandidates')
 
 const router = express.Router()
-const fs = require('fs')
+
+const allCandidates = [...hdcDemoCandidates, ...hdcTestCandidates, ...hdcMultiCandidates]
 
 router.get('/:bookingId', (req, res) => {
   res.send({ offenderNo: '111111' })
+})
+
+router.get('/offenderNo/:offenderNo', (req, res) => {
+  const { offenderNo } = req.params
+  const found = allCandidates.find(candidate => candidate.offenderNo === offenderNo) || { bookingId: 0 }
+  res.send({ offenderNo: found.offenderNo, bookingId: found.bookingId })
 })
 
 router.get('/:bookingId/aliases', (req, res) => {
