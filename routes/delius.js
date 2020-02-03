@@ -105,7 +105,7 @@ router.get('/offenders/nomsNumber/:nomsNumber/allOffenderManagers', (req, res) =
 
 router.get('/probationAreas', (req, res) => {
   // return all probation areas
-  const allProbationAreas = probationAreas.map(probArea => probArea.area.content)
+  const allProbationAreas = probationAreas.map(probArea => ({ code: probArea.code, description: probArea.description }))
   const response = { content: allProbationAreas }
   res.send(response)
 })
@@ -113,8 +113,8 @@ router.get('/probationAreas', (req, res) => {
 router.get('/probationAreas/code/:code/localDeliveryUnits', (req, res) => {
   // return the LDUs for a specific probation area
   const { code: probationAreaCode } = req.params
-  const probationArea = probationAreas.filter(probArea => probArea.area.content.code === probationAreaCode)
-  const response = probationArea[0].ldus
+  const probationArea = probationAreas.filter(probArea => probArea.code === probationAreaCode)
+  const response = { content: probationArea[0].ldus }
   res.send(response)
 })
 
