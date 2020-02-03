@@ -1,4 +1,5 @@
 const express = require('express')
+const probationAreas = require('../routes/stubs/probationAreas')
 
 const teamC01T04 = {
   code: 'C01T04',
@@ -100,6 +101,21 @@ router.get('/offenders/nomsNumber/:nomsNumber/allOffenderManagers', (req, res) =
   ]
 
   res.send(ros)
+})
+
+router.get('/probationAreas', (req, res) => {
+  // return all probation areas
+  const allProbationAreas = probationAreas.map(probArea => ({ code: probArea.code, description: probArea.description }))
+  const response = { content: allProbationAreas }
+  res.send(response)
+})
+
+router.get('/probationAreas/code/:code/localDeliveryUnits', (req, res) => {
+  // return the LDUs for a specific probation area
+  const { code: probationAreaCode } = req.params
+  const probationArea = probationAreas.filter(probArea => probArea.code === probationAreaCode)
+  const response = { content: probationArea[0].ldus }
+  res.send(response)
 })
 
 module.exports = router
