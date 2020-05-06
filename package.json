@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "record-build-info": "node ./bin/record-build-info",
-    "lint": "eslint app.js routes"
+    "lint": "eslint app.js routes",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "cookie-parser": "^1.4.4",
@@ -15,7 +17,8 @@
     "jwt-decode": "^2.2.0",
     "moment": "^2.24.0",
     "morgan": "~1.9.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -46,5 +49,6 @@
     "ignore": [
       "package.json"
     ]
-  }
+  },
+  "snyk": true
 }
