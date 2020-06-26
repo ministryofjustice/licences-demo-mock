@@ -16,7 +16,7 @@ module.exports = token => {
     username = accessToken.replace('-token', '')
   }
 
-  if (username.includes('_TEST')) {
+  if (username.includes('_TEST') || username.startsWith('UOF_')) {
     return hdcTestCandidates
   }
 
