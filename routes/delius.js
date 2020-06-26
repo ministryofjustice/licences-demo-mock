@@ -12,9 +12,20 @@ const teamC01T04 = {
 
 const deliusTeams = [teamC01T04]
 
+const AUTH_RO_USER_TEST = {
+  username: 'AUTH_RO_USER_TEST',
+  staffCode: 'DELIUS_ID_TEST',
+  email: 'hdc_test+RO_USER_TEST@digital.justice.gov.uk',
+  staff: {
+    forenames: 'FIRSTA',
+    surname: 'LASTA',
+  },
+  teams: deliusTeams,
+}
+
 const RO_USER_TEST = {
   username: 'RO_USER_TEST',
-  staffCode: 'DELIUS_ID_TEST',
+  staffCode: 'AUTH_DELIUS_ID_TEST',
   email: 'hdc_test+RO_USER_TEST@digital.justice.gov.uk',
   staff: {
     forenames: 'FIRSTA',
@@ -35,6 +46,7 @@ const RO_USER = {
 }
 
 const staffDetailsByUsername = {
+  AUTH_RO_USER_TEST,
   RO_USER_TEST,
   RO_USER,
 }

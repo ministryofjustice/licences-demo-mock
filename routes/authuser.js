@@ -11,9 +11,8 @@ const profiles = {
   },
   RO: {
     name: 'Ryan Orton',
-    username: 'RO_USER_TEST',
+    username: 'AUTH_RO_USER_TEST',
     email: 'RO_USER@work',
-    activeCaseLoadId: 'BEL',
   },
   DM: {
     name: 'Diane Matthews',
@@ -38,26 +37,17 @@ const profiles = {
 const roles = {
   CA: [
     {
-      roleCode: 'LEI_LICENCE_CA',
-    },
-    {
-      roleCode: 'LICENCE_RO',
-    },
-    {
-      roleCode: 'LEI_LICENCE_DM',
+      roleCode: 'LICENCE_CA',
     },
   ],
   RO: [
-    {
-      roleCode: 'LEI_LICENCE_RO',
-    },
     {
       roleCode: 'LICENCE_RO',
     },
   ],
   DM: [
     {
-      roleCode: 'LEI_LICENCE_DM',
+      roleCode: 'LICENCE_DM',
     },
   ],
   NOMIS: [
